@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: av_step3_data
+    description: This is a replica of the Snowflake database containing employee retention data extracted from Google Drive for the step3 take home test
+    database: PC_FIVETRAN_DB
+    schema: av_step3_data
+    tables:
+      - name: employees
+        description: Data containing employees information

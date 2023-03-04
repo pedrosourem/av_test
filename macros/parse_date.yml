@@ -1,0 +1,8 @@
+version: 2
+
+macros:
+  - name: parse_date
+    description: Parse dates adding the century and convert the data to date type.
+    arguments:
+      - name: date_string
+        type: VARCHAR
