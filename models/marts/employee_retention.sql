@@ -39,7 +39,7 @@ employee_retention AS (
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1965 AND 1980 THEN 'Generation X'
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1981 AND 1994 THEN 'Millennials Y'
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1995 AND 2009 THEN 'Generation Z'
-            ELSE 'Generation Alpha' END AS generation,
+            ELSE 'Generation Alpha' END AS generation, -- adding generation column
           hire_date,
           exit_date,
           d.exit_reason  
