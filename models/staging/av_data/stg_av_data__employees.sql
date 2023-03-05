@@ -1,8 +1,10 @@
 WITH source_employees AS (
-    SELECT *
-    FROM {{ source(av_step3_data, employees) }}
+
+    SELECT * FROM {{ source(av_step3_data, employees) }}
 ),
+
 final AS (
+
     SELECT 
             emp_no,
             emp_title_id,
@@ -14,5 +16,5 @@ final AS (
       FROM source_employees
       WHERE EMP_NO IS NOT NULL
 )
-SELECT *
-FROM final
+
+SELECT * FROM final

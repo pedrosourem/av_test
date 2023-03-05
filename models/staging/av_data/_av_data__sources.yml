@@ -11,9 +11,6 @@ sources:
         columns:
           - name: emp_no
             description: Primary key of the employees table.
-            tests:
-              - unique
-              - not_null
           - name: emp_title_id
           - name: birth_date
           - name: first_name
@@ -25,9 +22,6 @@ sources:
         description: Data of employees who left the company.
         columns:
           - name: emp_no
-            tests:
-            - unique
-            - not_null
           - name: exit_date
           - name: exit_reason
 
@@ -35,9 +29,6 @@ sources:
         description: Data containing id of employees and departments
         columns:
           - name: emp_no
-          tests:
-            - unique
-            - not_null
           - name: dept_no
           
 

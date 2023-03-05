@@ -1,8 +1,11 @@
 WITH source_dept_emp AS (
-    SELECT *
-    FROM {{source(av_step3_data, dept_emp)}}
+
+    SELECT * FROM {{source(av_step3_data, dept_emp)}}
+    
 ),
+
 final AS (
+
     SELECT 
         emp_no,
         dept_no
@@ -15,6 +18,7 @@ final AS (
         FROM source_dept_emp
         ORDER BY emp_no) AS partition
       WHERE row_num = 1 
+
 ),
-SELECT *
-FROM final
+
+SELECT * FROM final
