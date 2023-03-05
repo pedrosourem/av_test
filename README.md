@@ -1,5 +1,5 @@
 
-Analytic Vizion Interview Process - Step 3 
+                                                    Analytic Vizion Interview Process - Step 3 
 
 
 
@@ -74,10 +74,13 @@ Challenge:
 
 
 Bottlenecks:
-    1. The categorized form (exit_reason) is the only source of information regarding why employees leave the company, but the specific descriptions for each category are not provided.        
+
+    1. The categorized form (exit_reason) is the only source of information regarding why employees leave the company, but the specific descriptions for each category are not provided. 
+    
     2. It is not possible to extract employee location based on geographical data, as there is no specific column or field available for this information. 
 
 
 Plan of action to solve the bottlenecks:
+
     - Analyze the current process for collecting and categorizing employee exit reasons and employee geographical location.
     - Update the current process to collect and include the missing columns.     
