@@ -7,4 +7,43 @@ sources:
     schema: av_step3_data
     tables:
       - name: employees
-        description: Data containing employees information
+        description: Data containing employees information.
+        columns:
+          - name: emp_no
+            description: Primary key of the employees table.
+            tests:
+              - unique
+              - not_null
+          - name: emp_title_id
+          - name: birth_date
+          - name: first_name
+          - name: last_name
+          - name: sex
+          - name: hire_date
+
+      - name: departures
+        description: Data of employees who left the company.
+        columns:
+          - name: emp_no
+            tests:
+            - unique
+            - not_null
+          - name: exit_date
+          - name: exit_reason
+
+      - name: dept_emp
+        description: Data containing id of employees and departments
+        columns:
+          - name: emp_no
+          tests:
+            - unique
+            - not_null
+          - name: dept_no
+          
+
+      - name: departments
+        description: Data containig the names of departments
+        columns:
+          - name: dept_no
+            description: Primary key of the departments table.
+          - name: dept_name
