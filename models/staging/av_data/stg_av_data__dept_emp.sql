@@ -1,7 +1,7 @@
 WITH source_dept_emp AS (
 
-    SELECT * FROM {{source(av_step3_data, dept_emp)}}
-    
+    SELECT * FROM {{source('av_step3_data', 'dept_emp')}}
+
 ),
 
 final AS (

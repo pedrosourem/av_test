@@ -1,6 +1,6 @@
 WITH source_departments AS (
 
-    SELECT * FROM {{source(av_step3_data, departments)}}
+    SELECT * FROM {{ source('av_step3_data', 'departments') }}
 
 ),
 
