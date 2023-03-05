@@ -29,28 +29,35 @@ Challenge:
     1. employees: 
         columns:
             - emp_no (employee id), 
+            
             - birth_date, 
+            
             - first_name,
+            
             - last_name,
+            
             - sex,
+            
             - hire_date
     
     2. departures: 
         columns:
             - emp_no,
+            
             - exit_date,
-            - exit_reason
-        OBS: 
-            The categorized form (exit_reason) is the only source of information regarding why employees leave the company, but the specific descriptions for each category are not provided.        
+            
+            - exit_reason    
     
     3. dept_emp:
         columns:
             - emp_no,
+            
             - dept_no 
     
     4. departments:
         columns:
             - dept_no,
+            
             - dept_name
     
 
