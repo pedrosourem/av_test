@@ -2,6 +2,7 @@
 Analytic Vizion Interview Process - Step 3 
 
 Business needs: Develop a dashboard similar to the employee retention dashboard: https://public.tableau.com/app/profile/starschema/viz/Fluctuationreport/Fluctuationreport
+
 Challenge: Extract and load the raw data into Snowflake via Fivetran, and transform the data with DBT for the BI team to construct the dashboard.
 
 
