@@ -46,13 +46,13 @@ employee_retention AS (
       ON 
         e.emp_no = d.emp_no
       LEFT JOIN 
-        employees_department ed
+        dept_emp de
       ON 
-        e.emp_no = ed.emp_no
+        e.emp_no = de.emp_no
       LEFT JOIN 
         departments dept
       ON 
-        ed.dept_no = dept.dept_no
+        de.dept_no = dept.dept_no
 )
   
 SELECT * FROM employee_retention
