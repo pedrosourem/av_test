@@ -19,6 +19,6 @@ final AS (
         ORDER BY emp_no) AS partition
       WHERE row_num = 1 
 
-),
+)
 
 SELECT * FROM final
