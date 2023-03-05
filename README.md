@@ -4,21 +4,28 @@ Analytic Vizion Interview Process - Step 3
 
 
 Business needs: 
+
     Develop a dashboard similar to the employee retention dashboard: https://public.tableau.com/app/profile/starschema/viz/Fluctuationreport/Fluctuationreport
 
 
 Challenge: 
+
     Extract and load the raw data into Snowflake via Fivetran, and transform the data with DBT for the BI team to construct the dashboard.
 
 
  Dashboard's contents: 
+ 
     Metrics:
+    
         - Annual fluctuation rate
         - YTD number of leavers
         - Current headcounts
         - Current number of leavers
         - Current workforce changes
+        
+        
         Graphs:
+        
         - Bar chart: number of employees who left per location and department for each month.
         - Dot chart: number of employees who left per year. 
         - Pie chart: percentage of employee who left by generation (generation X, Y, Z, etc.)
