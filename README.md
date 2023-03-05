@@ -28,6 +28,7 @@ Challenge:
 - Data sources:
     1. employees: 
         columns:
+        
             - emp_no (employee id), 
             
             - birth_date, 
@@ -42,6 +43,7 @@ Challenge:
     
     2. departures: 
         columns:
+        
             - emp_no,
             
             - exit_date,
@@ -50,12 +52,14 @@ Challenge:
     
     3. dept_emp:
         columns:
+        
             - emp_no,
             
             - dept_no 
     
     4. departments:
         columns:
+        
             - dept_no,
             
             - dept_name
