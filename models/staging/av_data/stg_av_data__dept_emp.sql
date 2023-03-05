@@ -1,3 +1,8 @@
+{{ config (
+            materialized='view'
+        )
+}}
+
 WITH source_dept_emp AS (
 
     SELECT * FROM {{source('av_step3_data', 'dept_emp')}}

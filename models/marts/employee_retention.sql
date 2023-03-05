@@ -1,3 +1,8 @@
+{{ config (
+            materialized='table'
+        )
+}}
+
 WITH employees AS (
 
     SELECT * FROM {{ ref('stg_av_data__employees')}}

@@ -1,6 +1,12 @@
+{{ config (
+            materialized='view'
+        )
+}}
+
 WITH source_departures AS (
 
     SELECT * FROM {{ source('av_step3_data', 'departures') }}
+    
 ),
 
 final AS (

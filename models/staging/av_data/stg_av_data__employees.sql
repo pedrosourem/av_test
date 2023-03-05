@@ -1,3 +1,8 @@
+{{ config (
+            materialized='view'
+        )
+}}
+
 WITH source_employees AS (
 
     SELECT * FROM {{ source('av_step3_data', 'employees') }}
@@ -6,15 +11,14 @@ WITH source_employees AS (
 final AS (
 
     SELECT 
-            emp_no,
-            emp_title_id,
-            {{ parse_date('birth_date') }} AS birth_date,
+            emp_no AS employee_id,
             first_name,
             last_name,
             sex,
+            {{ parse_date('birth_date') }} AS birth_date,
             {{ parse_date('hire_date') }} AS hire_date
       FROM source_employees
-      WHERE EMP_NO IS NOT NULL
+      WHERE employee_id IS NOT NULL -- removing NULL values in employee_id column
 )
 
 SELECT * FROM final
