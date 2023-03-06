@@ -17,13 +17,6 @@ sources:
           - name: last_name
           - name: sex
           - name: hire_date
-      
-      - name: titles
-        descriptions: Data of employee roles.
-        columns: 
-          - name: title_id
-            description: Primary key of the titles table.
-          - name: title
 
       - name: departures
         description: Data of employees who left the company.
@@ -31,6 +24,13 @@ sources:
           - name: emp_no
           - name: exit_date
           - name: exit_reason
+
+      - name: titles
+        descriptions: Data of employee roles.
+        columns: 
+          - name: title_id
+            description: Primary key of the titles table.
+          - name: title
 
       - name: dept_emp
         description: Data containing id of employees and departments

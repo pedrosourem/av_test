@@ -15,6 +15,12 @@ departures AS (
 
 ),
 
+titles AS (
+
+    SELECT * FROM {{ ref('stg_av_data__titles')}}
+
+),
+
 dept_emp AS (
 
     SELECT * FROM {{ ref('stg_av_data__dept_emp')}}
@@ -31,6 +37,7 @@ employee_retention AS (
 
     SELECT
           e.emp_no,
+          t.role,
           dept.dept_name,
           e.sex,
           e.birth_date,
@@ -46,19 +53,23 @@ employee_retention AS (
             WHEN CAST(d.exit_reason AS VARCHAR(1)) IS NULL THEN '0' 
             ELSE CAST(d.exit_reason AS VARCHAR(1)) END AS exit_reason -- altering NULL values (current employees) to 0   
 
-      FROM 
-        employees e
-      LEFT JOIN 
-        departures d
-      ON 
+    FROM 
+        employees AS e
+    LEFT JOIN 
+        departures AS d
+    ON 
         e.emp_no = d.emp_no
-      LEFT JOIN 
-        dept_emp de
-      ON 
+    LEFT JOIN 
+        titles AS t
+    ON 
+        e.title_id = t.title_id
+    LEFT JOIN 
+        dept_emp AS de
+    ON 
         e.emp_no = de.emp_no
-      LEFT JOIN 
-        departments dept
-      ON 
+    LEFT JOIN 
+        departments AS dept
+    ON 
         de.dept_no = dept.dept_no
 )
   
