@@ -60,6 +60,7 @@ Challenge:
             - exit_reason    
     
     3. dept_emp:
+    
         columns:
         
             - emp_no,
@@ -67,6 +68,7 @@ Challenge:
             - dept_no 
     
     4. departments:
+
         columns:
         
             - dept_no,
