@@ -33,16 +33,18 @@ employee_retention AS (
           e.emp_no,
           dept.dept_name,
           e.sex,
-          birth_date,
+          e.birth_date,
           CASE
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1946 AND 1964 THEN 'Boomers'
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1965 AND 1980 THEN 'Generation X'
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1981 AND 1994 THEN 'Millennials Y'
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1995 AND 2009 THEN 'Generation Z'
             ELSE 'Generation Alpha' END AS generation, -- adding generation column
-          hire_date,
-          exit_date,
-          d.exit_reason  
+          e.hire_date,
+          d.exit_date,
+          CASE
+            WHEN CAST(d.exit_reason AS VARCHAR(1)) IS NULL THEN '0' 
+            ELSE CAST(d.exit_reason AS VARCHAR(1)) END AS exit_reason -- altering NULL values (current employees) to 0   
 
       FROM 
         employees e

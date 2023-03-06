@@ -1,5 +1,5 @@
 
-                                                    Analytic Vizion Interview Process - Step 3 
+                                            Analytic Vizion Interview Process - Step 3 
 
 
 

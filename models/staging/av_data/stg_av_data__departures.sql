@@ -16,7 +16,7 @@ final AS (
         {{ parse_date('exit_date') }} AS exit_date,
         exit_reason
     FROM source_departures
-    WHERE employee_id IS NOT NULL -- removing NULL values in emp_no column 
+    WHERE emp_no IS NOT NULL -- removing NULL values in emp_no column 
 
 )
 

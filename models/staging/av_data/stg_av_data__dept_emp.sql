@@ -22,7 +22,7 @@ final AS (
             ROW_NUMBER() OVER (PARTITION BY emp_no ORDER BY emp_no) as row_num
         FROM source_dept_emp
         ORDER BY emp_no) AS partition
-      WHERE row_num = 1 -- removing duplicated records to retrieve unique employee numbers
+      WHERE row_num = 1 -- removing duplicated records to retrieve unique employee numbers (Should this be in another file?)
 
 )
 
