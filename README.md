@@ -33,7 +33,8 @@ Challenge:
         
         
 - Data sources:
-    1. employees: 
+    1. employees:
+
         columns:
         
             - emp_no (employee id), 
@@ -49,6 +50,7 @@ Challenge:
             - hire_date
     
     2. departures: 
+
         columns:
         
             - emp_no,
@@ -79,8 +81,10 @@ Bottlenecks:
     
     2. It is not possible to extract employee location based on geographical data, as there is no specific column or field available for this information. 
 
+    3. Updated the dept_emp source table so all emp_no in the employees table matches with a department in the departments table. 
 
 Plan of action to solve the bottlenecks:
 
-    - Analyze the current process for collecting and categorizing employee exit reasons and employee geographical location.
-    - Update the current process to collect and include the missing columns.     
+    - Analyze the current process for collecting employee exit reasons, employee geographical location, and data in the dept_emp table.
+    - Update the current process to collect and include the missing columns.
+    - Update dept_emp table.     
