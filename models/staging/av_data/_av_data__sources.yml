@@ -1,0 +1,47 @@
+version: 2
+
+sources:
+  - name: av_step3_data
+    description: This is a replica of the Snowflake database containing employee retention data extracted from Google Drive for the step3 take home test
+    database: PC_FIVETRAN_DB
+    schema: av_step3_data
+    tables:
+      - name: employees
+        description: Data containing employees information.
+        columns:
+          - name: emp_no
+            description: Primary key of the employees table.
+          - name: emp_title_id
+          - name: birth_date
+          - name: first_name
+          - name: last_name
+          - name: sex
+          - name: hire_date
+      
+      - name: titles
+        descriptions: Data of employee roles.
+        columns: 
+          - name: title_id
+            description: Primary key of the titles table.
+          - name: title
+
+      - name: departures
+        description: Data of employees who left the company.
+        columns:
+          - name: emp_no
+          - name: exit_date
+          - name: exit_reason
+
+      - name: dept_emp
+        description: Data containing id of employees and departments
+        columns:
+          - name: emp_no
+          - name: dept_no
+          
+
+      - name: departments
+        description: Data containig the names of departments
+        columns:
+          - name: dept_no
+            description: Primary key of the departments table.
+          - name: dept_name
