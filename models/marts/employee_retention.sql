@@ -44,7 +44,7 @@ employee_retention AS (
           CASE
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1946 AND 1964 THEN 'Boomers'
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1965 AND 1980 THEN 'Generation X'
-            WHEN DATE_PART('YEAR', birth_date) BETWEEN 1981 AND 1994 THEN 'Millennials Y'
+            WHEN DATE_PART('YEAR', birth_date) BETWEEN 1981 AND 1994 THEN 'Millennials'
             WHEN DATE_PART('YEAR', birth_date) BETWEEN 1995 AND 2009 THEN 'Generation Z'
             ELSE 'Generation Alpha' END AS generation, -- adding generation column
           e.hire_date,
