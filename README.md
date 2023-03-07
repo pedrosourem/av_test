@@ -79,14 +79,16 @@ Challenge:
 
 Bottlenecks:
 
-    1. The categorized form (exit_reason) is the only source of information regarding why employees leave the company, but the specific descriptions for each category are not provided. 
-    
-    2. It is not possible to extract employee location based on geographical data, as there is no specific column or field available for this information. 
+    1. The only source of information regarding why employees leave the company is the categorized form (exit_reason), but the descriptions for each category are not provided. 
 
-    3. Updated the dept_emp source table so all emp_no in the employees table matches with a department in the departments table. 
+    2. There is no specific column available for employee location.
+
+    3. The dept_emp source table is missing some employee id (emp_no), resulting in missing department number in the joined table.
+
 
 Plan of action to solve the bottlenecks:
 
-    - Analyze the current process for collecting employee exit reasons, employee geographical location, and data in the dept_emp table.
-    - Update the current process to collect and include the missing columns.
-    - Update dept_emp table.     
+    - Review the data source to find the missing data of exit_reasons descriptions and employee location.
+    
+    - Analyze the process of updating and collecting the dept_emp table to retrieve the most up-to-date information. 
+    
